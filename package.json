@@ -1,0 +1,25 @@
+{
+  "name": "valor",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuanchyone1/cypress-training.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Juan Torres juan.torresh@perficient.com chuanchyone1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chuanchyone1/cypress-training/issues"
+  },
+  "homepage": "https://github.com/chuanchyone1/cypress-training#readme"
+}
