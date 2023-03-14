@@ -1,3 +1,7 @@
+import {LoginPage} from "../pages/index";
+
+const loginPage = new LoginPage();
+
 describe("Buy a black t-shirt", () => {
   it("then the t-shirt should be bought", () => {
     cy.visit("https://www.saucedemo.com/"); // (1)
