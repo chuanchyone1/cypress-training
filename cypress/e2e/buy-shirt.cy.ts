@@ -1,23 +1,30 @@
-import {LoginPage} from "../pages/index";
+import {LoginPage} from "../page/index";
+import {ProductListPage} from "../page/index";
+import {ItemPages} from "../page/index";
+import {CartPage} from "../page/index";
+import {InformationPage} from "../page/index";
+import {OverView} from "../page/index";
+import {Finish} from "../page/index";
 
 const loginPage = new LoginPage();
+const productListPage = new ProductListPage();
+const itemPage = new ItemPages();
+const cartPage = new CartPage();
+const informationPage = new InformationPage();
+const overview = new OverView();
+const finish = new Finish();
+
 
 describe("Buy a black t-shirt", () => {
   it("then the t-shirt should be bought", () => {
-    cy.visit("https://www.saucedemo.com/"); // (1)
-    cy.get("#user-name").type("standard_user"); // (2)
-    cy.get("#password").type("secret_sauce"); // (2)
-    cy.get("#login-button").click(); // (2)
-    cy.get("#item_1_title_link").click();
-    cy.get("#add-to-cart-sauce-labs-bolt-t-shirt").click();
-    cy.get("#shopping_cart_container").click();
-    cy.get("#checkout").click();
-    cy.get("#first-name").type("Cypress");
-    cy.get("#last-name").type("Workshop");
-    cy.get("#postal-code").type("00000");
-    cy.get("#continue").click();
-    cy.get("#finish").click();
-
+    loginPage.visitLoginPage();
+    loginPage.signIn();
+    productListPage.selectSauceLabsBolt();
+    itemPage.clickAddToCart();
+    cartPage.selectCart();
+    informationPage.selectCheckout();
+    overview.selectContinue();
+    finish.selectFinish();
 
     // Debes completar la prueba con los puntos 3 al 11 del flujo
 

@@ -23,3 +23,4 @@ class LoginPage {
   }
   
   export { LoginPage };
+  
