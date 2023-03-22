@@ -17,8 +17,10 @@ const finish = new Finish();
 
 describe("Buy a black t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    // Arrange
     loginPage.visitLoginPage();
     loginPage.signIn();
+    // Action
     productListPage.selectSauceLabsBolt();
     itemPage.clickAddToCart();
     cartPage.selectCart();
@@ -27,7 +29,7 @@ describe("Buy a black t-shirt", () => {
     finish.selectFinish();
 
     // Debes completar la prueba con los puntos 3 al 11 del flujo
-
+    // Assertion
     cy.get("#contents_wrapper > .checkout_complete_container > h2").should(
         "have.text",
         "Thank you for your order!",
