@@ -21,7 +21,7 @@ describe("Buy a black t-shirt", () => {
     loginPage.visitLoginPage();
     loginPage.signIn();
     // Action
-    productListPage.selectSauceLabsBolt();
+    productListPage.findProductByName();
     itemPage.clickAddToCart();
     cartPage.selectCart();
     informationPage.selectCheckout();
