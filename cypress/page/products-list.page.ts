@@ -6,7 +6,7 @@ class ProductListPage {
     }
 
     public findProductByName(nombre_producto: string): void {
-        cy.get(this.sauceLabsBolt).filter(':contains(' + nombre_producto + ')').click();    
+        cy.get(this.sauceLabsBolt).filter(`:contains(${nombre_producto})`).click();   
     }
 }
 
