@@ -2,11 +2,11 @@ class ProductListPage {
     private sauceLabsBolt: string;
 
     constructor() {
-        this.sauceLabsBolt = "#item_1_title_link";
+        this.sauceLabsBolt = ".inventory_list .inventory_item";
     }
 
-    public selectSauceLabsBolt(): void {
-        cy.get(this.sauceLabsBolt).click();
+    public findProductByName(nombre_producto: string): void {
+        cy.get(this.sauceLabsBolt).filter(`:contains(${nombre_producto})`).click();   
     }
 }
 
