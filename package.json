@@ -12,8 +12,8 @@
     "combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/report.json",
     "generate:reports": "marge cypress/reports/report.json -f report -o cypress/reports",
     "cypress:reports": "npm run cypress:run && npm run combine:reports && npm run generate:reports",
-    "pretest": "rm -rf ./logs",      
-    "posttest": "jslint ." 
+    "pretest": "rm -rf cypress/reports",      
+    "posttest": "npm run combine:reports && npm run generate:reports" 
   },
   "repository": {
     "type": "git",
