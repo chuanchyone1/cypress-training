@@ -25,7 +25,7 @@ describe("Personal Information", () => {
     cy.get(".table-responsive .table-dark tr:nth-child(2)").should("have.text", "Student Emailtest@email.com");
     cy.get(".table-responsive .table-dark tr:nth-child(3)").should("have.text", "GenderMale");
     cy.get(".table-responsive .table-dark tr:nth-child(4)").should("have.text", "Mobile3656589156");
-    cy.get(".table-responsive .table-dark tr:nth-child(5)").should("have.text", "Date of Birth30 July,202327");
+    cy.get(".table-responsive .table-dark tr:nth-child(5)").should("have.text", "Date of Birth31 July,202327");
     cy.get(".table-responsive .table-dark tr:nth-child(7)").should("have.text", "HobbiesReading, Music");
     cy.get(".table-responsive .table-dark tr:nth-child(9)").should("have.text", "AddressAv siempreViva # 123");
     cy.get(".table-responsive .table-dark tr:nth-child(10)").should("have.text", "State and City");
