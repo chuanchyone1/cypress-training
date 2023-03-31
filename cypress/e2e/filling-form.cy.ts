@@ -19,8 +19,8 @@ describe("Personal Information", () => {
     personalinformation.hobby();
     personalinformation.otherHobby();
     personalinformation.address("Av siempreViva # 123");
-    personalinformation.sub();     
-    // Assertion    
+    personalinformation.sub();
+    // Assertion
     cy.get(".table-responsive .table-dark tr:nth-child(1) td:nth-child(2)").should("have.text", "Holmes Salazar");
     cy.get(".table-responsive .table-dark tr:nth-child(2)").should("have.text", "Student Emailtest@email.com");
     cy.get(".table-responsive .table-dark tr:nth-child(3)").should("have.text", "GenderMale");
