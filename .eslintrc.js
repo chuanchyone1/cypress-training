@@ -19,6 +19,6 @@ module.exports = {
     "cypress/no-force": "warn",
     "no-unused-vars": "warn",
     "require-jsdoc": "warn",
-    "max-len": [ "error", { "code": 120 } ]
+    "max-len": [ "error", { "code": 180 } ]
   },
 };
