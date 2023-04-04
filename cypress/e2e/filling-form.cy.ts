@@ -9,15 +9,12 @@ describe("Personal Information", () => {
     // Arrange
     login.visitLoginPage();
     // Action
-    const userdata = {name: "Holmes", lastName: "Salazar", email: "test@email.com", mobileNumber: "3656589156", currentAddress: "Av siempreViva # 123"};
+    const userdata = {name: "Holmes", lastName: "Salazar", email: "test@email.com", gender: "Male", mobileNumber: "3656589156", music: "Music", reading: "Reading", currentAddress: "Av siempreViva # 123"};
     personalinformation.fillForm(userdata);
-    personalinformation.genderData();
     personalinformation.selectDayOfBirth();
     personalinformation.selectMonth();
     personalinformation.selectYear();
     personalinformation.selectDay();
-    personalinformation.hobby();
-    personalinformation.otherHobby();
     personalinformation.sub();
     // Assertion
     cy.get("table > tbody > tr:nth-child(1)").should("have.text", "Student NameHolmes Salazar");

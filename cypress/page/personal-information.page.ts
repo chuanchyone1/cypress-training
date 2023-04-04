@@ -1,9 +1,12 @@
 export type UserInformation = {
     name: string;
     lastName: string;
-    email: string;   
+    email: string;
+    gender: string;
+    music: string;
+    reading: string;
     mobileNumber: string;
-    currentAddress: string;   
+    currentAddress: string;      
 }
 
 class PersonalInformation {
@@ -16,8 +19,8 @@ class PersonalInformation {
     private year: string;
     private day: string;
     private mobileNumber: string;
-    private hobbies: string;
-    private other: string;
+    private music: string;
+    private reading: string;
     private currentAddress: string;
     private submit: string;  
     
@@ -31,8 +34,8 @@ class PersonalInformation {
         this.year = ".react-datepicker__year-select";
         this.day = ":nth-child(5) > .react-datepicker__day--027";
         this.mobileNumber = "#userNumber";
-        this.hobbies = "#hobbies-checkbox-2";
-        this.other = "#hobbies-checkbox-3";
+        this.music = "#hobbies-checkbox-2";
+        this.reading = "#hobbies-checkbox-3";
         this.currentAddress = "#currentAddress";
         this.submit = "#submit";      
 
@@ -41,14 +44,13 @@ class PersonalInformation {
     public fillForm(userInformation: UserInformation){
         cy.get(this.name).type(userInformation.name);  
         cy.get(this.lastName).type(userInformation.lastName);
-        cy.get(this.email).type(userInformation.email);       
-        cy.get(this.mobileNumber).type(userInformation.mobileNumber);             
-        cy.get(this.currentAddress).type(userInformation.currentAddress);      
-    }
-
-    public genderData(): void {
-        cy.get(this.gender).check({force: true});
-    }
+        cy.get(this.email).type(userInformation.email);
+        cy.get(this.gender).click({force: true});       
+        cy.get(this.mobileNumber).type(userInformation.mobileNumber);
+        cy.get(this.music).click({force: true}); 
+        cy.get(this.reading).click({force: true});             
+        cy.get(this.currentAddress).type(userInformation.currentAddress);     
+    }   
     
     public selectDayOfBirth(): void {
         cy.get(this.dateOfBirth).click({force: true});
@@ -64,16 +66,8 @@ class PersonalInformation {
 
     public selectDay(): void {
         cy.get(this.day).click({force: true});
-    }    
-
-    public hobby(): void {
-        cy.get(this.hobbies).check({force: true});
     }
     
-    public otherHobby(): void {
-        cy.get(this.other).check({force: true});
-    }
-
     public sub(): void {
         cy.get(this.submit).click({force: true});
     }   
