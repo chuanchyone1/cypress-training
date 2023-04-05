@@ -9,6 +9,7 @@ describe("Personal Information", () => {
     // Arrange
     login.visitLoginPage();
     // Action
+    personalinformation.selectDayOfBirth();
     const userdata = {name: "Holmes",
       lastName: "Salazar",
       email: "test@email.com",
@@ -18,12 +19,9 @@ describe("Personal Information", () => {
       year: "2016",
       music: "Music",
       reading: "Reading",
-      currentAddress: "Av siempreViva # 123"};
-    personalinformation.fillForm(userdata);
-    personalinformation.selectDayOfBirth();
-    // personalinformation.selectMonth();
-    // personalinformation.selectYear();
+      currentAddress: "Av siempreViva # 123"};    
     personalinformation.selectDay();
+    personalinformation.fillForm(userdata);
     personalinformation.sub();
     // Assertion
     cy.get("table > tbody > tr:nth-child(1)").should("have.text", "Student NameHolmes Salazar");
