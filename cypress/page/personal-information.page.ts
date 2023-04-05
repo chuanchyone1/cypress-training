@@ -5,10 +5,10 @@ export type UserInformation = {
     gender: string;
     music: string;
     reading: string;
-    mobileNumber: string;
-    //dateOfBirth: string;
+    mobileNumber: string;   
     month: string;
     year: string;
+    day: string;
     currentAddress: string;      
 }
 
@@ -35,7 +35,7 @@ class PersonalInformation {
         this.dateOfBirth = "#dateOfBirthInput";
         this.month = ".react-datepicker__month-select";
         this.year = ".react-datepicker__year-select";
-        this.day = ":nth-child(5) > .react-datepicker__day--027";
+        this.day = ":nth-child(5) > .react-datepicker__day--0";
         this.mobileNumber = "#userNumber";
         this.music = "#hobbies-checkbox-2";
         this.reading = "#hobbies-checkbox-3";
@@ -50,29 +50,14 @@ class PersonalInformation {
         cy.get(this.email).type(userInformation.email);
         cy.get(this.gender).click({force: true});       
         cy.get(this.mobileNumber).type(userInformation.mobileNumber);
-        //cy.get(this.dateOfBirth).click({force: true});
+        cy.get(this.dateOfBirth).click({force: true});
         cy.get(this.month).select(userInformation.month);
         cy.get(this.year).select(userInformation.year);
+        cy.get(this.day + userInformation.day).click({force: true});
         cy.get(this.music).click({force: true}); 
         cy.get(this.reading).click({force: true});             
         cy.get(this.currentAddress).type(userInformation.currentAddress);     
-    }   
-    
-    public selectDayOfBirth(): void {
-        cy.get(this.dateOfBirth).click({force: true});
-    }
-
-    /*public selectMonth(): void {        
-        cy.get(this.month).select('July');
-    }
-
-    public selectYear(): void {
-        cy.get(this.year).select('2016');
-    }*/
-
-    public selectDay(): void {
-        cy.get(this.day).click({force: true});
-    }
+    }       
     
     public sub(): void {
         cy.get(this.submit).click({force: true});

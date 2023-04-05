@@ -9,7 +9,6 @@ describe("Personal Information", () => {
     // Arrange
     login.visitLoginPage();
     // Action
-    personalinformation.selectDayOfBirth();
     const userdata = {name: "Holmes",
       lastName: "Salazar",
       email: "test@email.com",
@@ -17,10 +16,10 @@ describe("Personal Information", () => {
       mobileNumber: "3656589156",
       month: "July",
       year: "2016",
+      day: "27",
       music: "Music",
       reading: "Reading",
-      currentAddress: "Av siempreViva # 123"};    
-    personalinformation.selectDay();
+      currentAddress: "Av siempreViva # 123"};
     personalinformation.fillForm(userdata);
     personalinformation.sub();
     // Assertion
