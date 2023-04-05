@@ -6,6 +6,8 @@ export type UserInformation = {
     music: string;
     reading: string;
     mobileNumber: string;
+    month: string;
+    year: string;
     currentAddress: string;      
 }
 
@@ -47,6 +49,8 @@ class PersonalInformation {
         cy.get(this.email).type(userInformation.email);
         cy.get(this.gender).click({force: true});       
         cy.get(this.mobileNumber).type(userInformation.mobileNumber);
+        cy.get(this.month).select(userInformation.month);
+        cy.get(this.year).select(userInformation.year);
         cy.get(this.music).click({force: true}); 
         cy.get(this.reading).click({force: true});             
         cy.get(this.currentAddress).type(userInformation.currentAddress);     
@@ -56,13 +60,13 @@ class PersonalInformation {
         cy.get(this.dateOfBirth).click({force: true});
     }
 
-    public selectMonth(): void {        
+    /*public selectMonth(): void {        
         cy.get(this.month).select('July');
     }
 
     public selectYear(): void {
         cy.get(this.year).select('2016');
-    }
+    }*/
 
     public selectDay(): void {
         cy.get(this.day).click({force: true});

@@ -9,11 +9,20 @@ describe("Personal Information", () => {
     // Arrange
     login.visitLoginPage();
     // Action
-    const userdata = {name: "Holmes", lastName: "Salazar", email: "test@email.com", gender: "Male", mobileNumber: "3656589156", music: "Music", reading: "Reading", currentAddress: "Av siempreViva # 123"};
+    const userdata = {name: "Holmes",
+      lastName: "Salazar",
+      email: "test@email.com",
+      gender: "Male",
+      mobileNumber: "3656589156",
+      month: "July",
+      year: "2016",
+      music: "Music",
+      reading: "Reading",
+      currentAddress: "Av siempreViva # 123"};
     personalinformation.fillForm(userdata);
     personalinformation.selectDayOfBirth();
-    personalinformation.selectMonth();
-    personalinformation.selectYear();
+    // personalinformation.selectMonth();
+    // personalinformation.selectYear();
     personalinformation.selectDay();
     personalinformation.sub();
     // Assertion
