@@ -8,16 +8,8 @@ describe("Upload a file", () => {
     login.visitLoginPage();
     // Action
     login.selectFile();
-    cy.wait(2000);
     login.uploadButton();
-    /* cy.fixture("EAWeekly.png", "base64").then((fileContent) => {      
-    }); */
-    
-    // Debes completar la prueba con los puntos 3 al 11 del flujo
     // Assertion
-    /* cy.get("#contents_wrapper > .checkout_complete_container > h2").should(
-        "have.text",
-        "Thank you for your order!",
-    ); // (12) */
+    cy.get("#content").contains("File Uploaded!");
   });
 });

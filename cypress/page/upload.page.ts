@@ -18,7 +18,7 @@ class Login {
   }
 
   public uploadButton(): void {
-    cy.get(this.file).click({force:true});
+    cy.get(this.upload).click({force:true});
   }
 }
 
