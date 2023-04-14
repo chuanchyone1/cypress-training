@@ -5,3 +5,5 @@ export { CartPage } from "./shopping-cart.page";
 export { InformationPage } from "./information.page";
 export { OverView } from "./overview.page";
 export { Finish } from "./checkout-complete.page";
+export { Login } from "./upload.page";
+
