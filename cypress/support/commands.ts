@@ -1,5 +1,5 @@
 import "cypress-file-upload";
-import './commands';
+import "./commands";
 
 // ***********************************************
 // This example commands.js shows you how to
