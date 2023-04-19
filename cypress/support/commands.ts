@@ -1,5 +1,4 @@
 import "./commands";
-require("cypress-downloadfile/lib/downloadFileCommand");
 
 // ***********************************************
 // This example commands.js shows you how to
