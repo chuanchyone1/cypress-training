@@ -9,7 +9,8 @@ describe("Dowload a file", () => {
     // Action
     loginDownload.dowloandButton();
     // Aseert
-    cy.readFile("C:/Users/juan.torresh/Documents/cypress-training-main/chrome/downloads/sampleFile.jpeg").should(
+    cy.readFile(
+        "home/runner/work/cypress-training/cypress-training/C:/Users/juan.torresh/Documents/cypress-training-main/chrome/downloads/sampleFile.jpeg").should(
         "exist");
   });
 });
