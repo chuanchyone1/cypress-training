@@ -1,4 +1,4 @@
-import {Iframe} from "../page/iframe.page";
+import {Iframe} from "../page/index";
 
 const iframe = new Iframe;
 
