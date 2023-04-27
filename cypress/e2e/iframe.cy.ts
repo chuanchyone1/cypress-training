@@ -7,20 +7,8 @@ describe("iframe", () => {
     // Arrange
     iframe.visit();
     // Action
-    // Assert
-    cy.get(".left_h2").should("have.text", "HTMLHTMLHTMLHTMLHTMLHTMLHTML");
+    iframe.getFrameTitle();
+    iframe.goToCssPageInFrame();
+    // Assert    
   });
-
-  it(
-      "retries",
-      {
-        retries: {
-          runMode: 2,
-          openMode: 0,
-        },
-      },
-      () => {
-
-      },
-  );
 });
