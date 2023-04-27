@@ -24,7 +24,7 @@ class Iframe {
 
     public goToCssPageInFrame(): void {
         cy.iframe(this.Tutorial).find(this.css).click();
-        cy.frameLoaded(this.Tutorial,{url:"https://www.w3schools.com/css/default.asp"}).iframe(this.Tutorial).find(this.validateTutorial).should("have.text", "CSS Tutorial");       
+        cy.frameLoaded(this.Tutorial,{url:g"https://www.w3schools.com/css/default.asp"}).iframe(this.Tutorial).find(this.validateTutorial).should("have.text", "CSS Tutorial");       
     }
 }
 

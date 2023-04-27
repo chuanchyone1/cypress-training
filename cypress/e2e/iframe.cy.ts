@@ -9,6 +9,6 @@ describe("iframe", () => {
     // Action
     iframe.getFrameTitle();
     iframe.goToCssPageInFrame();
-    // Assert    
+    // Assert
   });
 });
