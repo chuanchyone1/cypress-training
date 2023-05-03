@@ -1,4 +1,5 @@
 import "./commands";
+import 'cypress-iframe';
 
 // ***********************************************
 // This example commands.js shows you how to
