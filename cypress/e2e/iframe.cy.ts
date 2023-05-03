@@ -7,8 +7,9 @@ describe("iframe", () => {
     // Arrange
     iframe.visit();
     // Action
-    iframe.getFrameTitle();
+    iframe.getFrameTitle("HTML Tutorial");
     iframe.goToCssPageInFrame();
+    iframe.getFrameTitle("CSS Tutorial");
     // Assert
   });
 });
